@@ -13,6 +13,7 @@ $(function() {
       </select>\
       <label for='form_field_name_x'>Name Of First Form Field</label>\
       <input type='text' class='form-control' id='form_field_name_x' name='form_fields[_x][name]' placeholder='What field should be called'>\
+      
     </div>\
   </div>";
 

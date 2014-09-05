@@ -1,12 +1,13 @@
 class FormBuilder
-attr_accessor :path, :request, :fields, :field_name, :finished_fields
+attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs
 
   def initialize(params_hash)
     @path = params_hash['path']
     @request = check_request_type(params_hash)
+    @inputs = []
     @fields = params_hash['form_fields']
     @finished_fields = []
-    field_factory(fields)
+    field_factory
     # binding.pry
   end
 
@@ -21,16 +22,17 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields
         </form>}
   end
 
-  def field_factory(hash_of_all_fields)
-    hash_of_all_fields.each_value do |field|
-      binding.pry
-      # finished_fields = []
-      # finished_fields << "<input type='#{field["field_type"]}' name='#{field["field_name"]}'>"
+  def field_factory
+    inputs = []
+    fields.each_value do |field|
       field.each do |key, value|
-        binding.pry
-        finished_fields << "<input #{key}='#{value}'>"
+        inputs << "#{key}='#{value}' "
       end
+      complete = "<input " + inputs.join(' ') + ">"
+      finished_fields << complete
+      inputs.clear
     end
+    binding.pry
   end
 
   # def textarea_field
