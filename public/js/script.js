@@ -1,19 +1,18 @@
 $(function() {
 
-  // var $add = $('#add_field')
   var $counter = 1
   var $field =
   "<div class='form-inline'>\
     <div class='form-group'>\
       <label for='form_field_x'>Type of field</label>\
-      <select class='form-control' id='form_field_x' name='form_fields[_x][field_type]'>\
+      <select class='form-control' id='form_field_x' name='form_fields[_x][type]'>\
         <option>Text</option>\
         <option>Phone</option>\
         <option>Email</option>\
         <option>Password</option>\
       </select>\
       <label for='form_field_name_x'>Name Of First Form Field</label>\
-      <input type='text' class='form-control' id='form_field_name_x' name='form_fields[_x][field_name]' placeholder='What field should be called'>\
+      <input type='text' class='form-control' id='form_field_name_x' name='form_fields[_x][name]' placeholder='What field should be called'>\
     </div>\
   </div>";
 
