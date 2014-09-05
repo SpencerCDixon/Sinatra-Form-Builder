@@ -7,7 +7,7 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs
     @inputs = []
     @fields = params_hash['form_fields']
     @finished_fields = []
-    field_factory
+    # field_factory
     # binding.pry
   end
 
