@@ -1,0 +1,33 @@
+<div class="container">
+  <h1> Sinatra Form Builder </h1>
+
+
+  <form role="form" action="/create" method="post">
+    <div class="form-group">
+      <label for="path">Path For Request</label>
+      <input type="text" class="form-control" id="path" name="path" placeholder="Enter Path (include all /'s)">
+    </div>
+    <label> Type Of Request </label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="GET"> GET
+      </label>
+      <label>
+        <input type="checkbox" name="POST"> POST
+      </label>
+    </div>
+
+
+    <div id="placeholder"></div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="bootstrap"> Do You Want Bootstrap?
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-default">Make My Form</button>
+    <button id="add_field" class="btn btn-default">Add Field</button>
+  </form>
+
+</div>
