@@ -27,11 +27,3 @@ $(function() {
 
 
 });
-
-var firepadDiv = document.getElementById('firepad-container');
-var firepadRef = new Firebase('https://form-builder.firebaseio.com/');
-var codeMirror = CodeMirror(firepadDiv, {
-      lineNumbers: true,
-      mode: 'javascript'
-    });
-var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror);

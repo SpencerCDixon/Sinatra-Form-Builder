@@ -7,7 +7,7 @@
       <label for="path">Path For Request</label>
       <input type="text" class="form-control" id="path" name="path" placeholder="Enter Path (include all /'s)">
     </div>
-    <label> Type Of Request </label>
+    <!-- <label> Type Of Request </label>
     <div class="checkbox">
       <label>
         <input type="checkbox" name="GET"> GET
@@ -15,7 +15,13 @@
       <label>
         <input type="checkbox" name="POST"> POST
       </label>
-    </div>
+    </div> -->
+
+    <label for='request_type'>Type Of Request</label>
+    <select class='form-control' id='form_field_x' name='request'>
+      <option>GET</option>
+      <option>POST</option>
+    </select>
 
 
     <div id="placeholder"></div>
@@ -31,4 +37,3 @@
   </form>
 
 </div>
-<div id="firepad-container"></div>

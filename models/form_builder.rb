@@ -1,25 +1,25 @@
 class FormBuilder
-attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs
+attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs, :finished_form
 
   def initialize(params_hash)
     @path = params_hash['path']
-    @request = check_request_type(params_hash)
+    @request = params_hash['request']
     @inputs = []
     @fields = params_hash['form_fields']
     @finished_fields = []
-    # field_factory
-    # binding.pry
-  end
+    field_factory
 
-  def check_request_type(params_hash)
-     params_hash['GET'] == 'on' ? "GET" : "POST"
+    @finished_form = build_form
   end
 
   def build_form
-      %Q{<form action='#{path}' method='#{request}'>
-          <input type='#{field}' name='#{field_name}'>
-          <input type='submit'>
-        </form>}
+      form = ""
+      form << "<form action='#{path}' method='#{request}'>"
+      finished_fields.each do |field|
+        form << field
+      end
+      form << "<button type='submit'>Submit</button>"
+      form << "</form>"
   end
 
   def field_factory
@@ -28,11 +28,10 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs
       field.each do |key, value|
         inputs << "#{key}='#{value}' "
       end
-      complete = "<input " + inputs.join(' ') + ">"
+      complete = "<input " + inputs.join('') + ">"
       finished_fields << complete
       inputs.clear
     end
-    binding.pry
   end
 
   # def textarea_field
