@@ -41,25 +41,25 @@ $(function() {
   //   function () {$(this).addClass("other");},
   //   function () {$(this).removeClass("other");}
   // );
+  ZeroClipboard.config( { swfPath: '/js/ZeroClipboard.swf' }  );
 
+  var client = new ZeroClipboard($("#copy-clipboard"));
+
+
+  client.on( "ready", function( readyEvent ) {
+
+    client.on( "copy", function (event) {
+      event.clipboardData.setData('text/plain', $(event.target).text());
+    });
+    client.on( "aftercopy", function( event ) {
+      alert("Copied text to clipboard!")
+    });
+  });
 
 });
 
 // main.js
-ZeroClipboard.config( { swfPath: '/js/ZeroClipboard.swf' }  );
 
-var client = new ZeroClipboard($("#copy-clipboard"));
-
-
-client.on( "ready", function( readyEvent ) {
-
-  client.on( "copy", function (event) {
-    event.clipboardData.setData('text/plain', $(event.target).text());
-  });
-  client.on( "aftercopy", function( event ) {
-    alert("Copied text to clipboard!")
-  });
-});
 //
 // $(client).hover(
 //   function() {$(this).addClass('test')},

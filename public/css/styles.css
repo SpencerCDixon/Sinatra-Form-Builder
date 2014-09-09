@@ -18,7 +18,7 @@ font-family: 'Montserrat', sans-serif;
 /* Form Builder
  */
 .form-builder {
- background: rgba(236, 240, 241, .6);
+ background: rgba(236, 240, 241, .5);
   padding: 5px 15px 20px 15px;
   margin: 10% auto;
   -webkit-border-radius: 10px;
@@ -60,20 +60,4 @@ font-family: 'Montserrat', sans-serif;
   padding: 3px 10px 10px 10px;
   margin: 5px;
   margin-top: 15px;
-}
-
-/* span#copy-clipboard pre:hover {
-  background-color: #000;
-}
- */
-
-.test {
-  background: #000;
-  margin-top: 40px;
-}
-.whatever {
-  margin: 5px;
-}
-.other {
-  margin-bottom: 20px;
 }
