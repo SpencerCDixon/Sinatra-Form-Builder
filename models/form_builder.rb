@@ -1,11 +1,13 @@
 require 'rouge'
 
 class FormBuilder
+attr_reader :submit
 attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs, :finished_form, :formatted_form
 
   def initialize(params_hash)
     @path = params_hash['path']
     @request = params_hash['request']
+    @submit = params_hash['submit']
     @inputs = []
     @fields = params_hash['form_fields']
     @finished_fields = []
@@ -21,7 +23,7 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs, 
       finished_fields.each do |field|
         form << field + "\n"
       end
-      form << "  <button type='submit'>Submit</button>\n"
+      form << "  <button type='submit'>#{submit}</button>\n"
       form << "</form>"
   end
 

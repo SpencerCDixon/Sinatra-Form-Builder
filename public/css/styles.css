@@ -39,5 +39,9 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .form-inline {
-  text-align: center;
+  text-align: left;
+}
+
+#submit {
+  width: 30%;
 }
