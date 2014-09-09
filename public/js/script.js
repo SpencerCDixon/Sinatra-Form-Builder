@@ -29,7 +29,32 @@ $(function() {
     $counter += 1;
   });
 
+  var $featuresButton = $('#features');
+  var $featuresShow = $('#show-features');
+  $featuresShow.hide();
 
+  $featuresButton.on("click", function(e){
+    e.preventDefault();
+    $featuresShow.toggle();
+  });
+
+
+
+  // main.js
+  var client = new ZeroClipboard( document.getElementById("copy-button") );
+  ZeroClipboard.config( { swfPath: 'ZeroClipboard.swf' }  );
+
+
+  client.on( "ready", function( readyEvent ) {
+  // alert( "ZeroClipboard SWF is ready!" );
+
+  client.on( "aftercopy", function( event ) {
+    // `this` === `client`
+    // `event.target` === the element that was clicked
+    event.target.style.display = "none";
+    alert("Copied text to clipboard: " + event.data["text/plain"] );
+  } );
+} );
 
 
 

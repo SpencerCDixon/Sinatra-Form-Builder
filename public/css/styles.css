@@ -45,3 +45,19 @@ font-family: 'Montserrat', sans-serif;
 #submit {
   width: 30%;
 }
+
+#features {
+  float: right;
+}
+
+#show-features {
+  display: none;
+  background: #fff;
+  color: #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 3px 10px 10px 10px;
+  margin: 5px;
+  margin-top: 15px;
+}
