@@ -48,7 +48,4 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs, 
   def lexer
     @lexer ||= Rouge::Lexer.find_fancy("html", finished_form) || Rouge::Lexers::PlainText
   end
-  # def textarea_field
-  # end
-
 end

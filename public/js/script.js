@@ -37,25 +37,18 @@ $(function() {
     e.preventDefault();
     $featuresShow.toggle();
   });
+});
 
+// main.js
+ZeroClipboard.config( { swfPath: '/js/ZeroClipboard.swf' }  );
 
+var client = new ZeroClipboard($("#copy-clipboard"));
 
-  // main.js
-  var client = new ZeroClipboard( document.getElementById("copy-button") );
-  ZeroClipboard.config( { swfPath: 'ZeroClipboard.swf' }  );
-
-
-  client.on( "ready", function( readyEvent ) {
-  // alert( "ZeroClipboard SWF is ready!" );
-
+client.on( "ready", function( readyEvent ) {
+  client.on( "copy", function (event) {
+    event.clipboardData.setData('text/plain', $(event.target).text());
+  });
   client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-    event.target.style.display = "none";
-    alert("Copied text to clipboard: " + event.data["text/plain"] );
-  } );
-} );
-
-
-
+    alert("Copied text to clipboard!")
+  });
 });
