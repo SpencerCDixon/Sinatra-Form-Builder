@@ -1,39 +1,30 @@
 <div class="container">
-  <h1> Sinatra Form Builder </h1>
+  <div class="form-builder">
+    <h1> Sinatra Form Builder </h1>
 
 
-  <form role="form" action="/create" method="post">
-    <div class="form-group">
-      <label for="path">Path For Request</label>
-      <input type="text" class="form-control" id="path" name="path" placeholder="Enter Path (include all /'s)">
-    </div>
-    <!-- <label> Type Of Request </label>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="GET"> GET
-      </label>
-      <label>
-        <input type="checkbox" name="POST"> POST
-      </label>
-    </div> -->
+    <form role="form" action="/create" method="post">
+      <div class="form-group">
+        <label for="path">Path For Request</label>
+        <input type="text" class="form-control" id="path" name="path" placeholder="Enter Path (include all /'s)">
+      </div>
 
-    <label for='request_type'>Type Of Request</label>
-    <select class='form-control' id='form_field_x' name='request'>
-      <option>GET</option>
-      <option>POST</option>
-    </select>
+      <label for='request_type'>Type Of Request</label>
+      <select class='form-control' id='form_field_x' name='request'>
+        <option>GET</option>
+        <option>POST</option>
+      </select>
 
+      <div id="placeholder"></div>
 
-    <div id="placeholder"></div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="bootstrap"> Do You Want Bootstrap? <em>(feature coming soon...)</em>
+        </label>
+      </div>
 
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="bootstrap"> Do You Want Bootstrap?
-      </label>
-    </div>
-
-    <button type="submit" class="btn btn-default">Make My Form</button>
-    <button class="add_field" class="btn btn-default">Add Field</button>
-  </form>
-
+      <button type="submit" class="btn btn-default">Make My Form</button>
+      <button class="add_field" class="btn btn-default">Add Field</button>
+    </form>
+  </div>
 </div>
