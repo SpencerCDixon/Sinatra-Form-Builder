@@ -1,7 +1,7 @@
 body {
-  background: #ecf0f1;
+background: url('../img/bg3.png');
+font-family: 'Montserrat', sans-serif;
 }
-
 
 
 /* HTML Display
@@ -11,9 +11,11 @@ body {
   margin: 20% auto;
 }
 
+/* Form Builder
+ */
 .form-builder {
-  background: #ccc;
-  padding: 5px;
+ background: rgba(236, 240, 241, .6);
+  padding: 5px 10px 10px 20px;
   margin: 10% auto;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -21,4 +23,9 @@ body {
   -webkit-box-shadow: 0 0 40px rgba(0,0,0,.7);
   -moz-box-shadow: 0 0 40px rgba(0,0,0,.7);
   box-shadow: 0 0 40px rgba(0,0,0,.7);
+}
+
+#title {
+  text-align: center;
+  text-decoration: 1px;
 }
