@@ -8,14 +8,18 @@ font-family: 'Montserrat', sans-serif;
  */
 .html_code {
   width: 80%;
-  margin: 20% auto;
+  margin: 10% auto;
+}
+
+.html_code h1 {
+  color: #fff;
 }
 
 /* Form Builder
  */
 .form-builder {
  background: rgba(236, 240, 241, .6);
-  padding: 5px 10px 10px 20px;
+  padding: 5px 15px 20px 15px;
   margin: 10% auto;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -28,4 +32,12 @@ font-family: 'Montserrat', sans-serif;
 #title {
   text-align: center;
   text-decoration: 1px;
+}
+
+.form-group {
+  margin: 15px auto;
+}
+
+.form-inline {
+  text-align: center;
 }

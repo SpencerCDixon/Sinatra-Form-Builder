@@ -27,13 +27,15 @@ attr_accessor :path, :request, :fields, :field_name, :finished_fields, :inputs, 
 
   def field_factory
     inputs = []
-    fields.each_value do |field|
-      field.each do |key, value|
-        inputs << "#{key}='#{value}'"
+    unless fields == nil
+      fields.each_value do |field|
+        field.each do |key, value|
+          inputs << "#{key}='#{value}' "
+        end
+        complete = "  <input " + inputs.join('') + ">"
+        finished_fields << complete
+        inputs.clear
       end
-      complete = "  <input " + inputs.join('') + ">"
-      finished_fields << complete
-      inputs.clear
     end
   end
 

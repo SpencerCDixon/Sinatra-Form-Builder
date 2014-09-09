@@ -12,5 +12,6 @@ end
 
 post '/create' do
   @form = FormBuilder.new(params)
+
   erb :show
 end
