@@ -61,3 +61,19 @@ font-family: 'Montserrat', sans-serif;
   margin: 5px;
   margin-top: 15px;
 }
+
+/* span#copy-clipboard pre:hover {
+  background-color: #000;
+}
+ */
+
+.test {
+  background: #000;
+  margin-top: 40px;
+}
+.whatever {
+  margin: 5px;
+}
+.other {
+  margin-bottom: 20px;
+}
