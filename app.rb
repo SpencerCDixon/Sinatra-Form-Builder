@@ -1,9 +1,8 @@
 require 'sinatra'
-require 'pry'
 require './models/form_builder'
 
 get '/' do
-  redirect '/create'
+  redirect 'create'
 end
 
 get '/create' do
